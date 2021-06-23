@@ -1,4 +1,4 @@
 require 'open-uri'
-URI.open("http://www.ruby-lang.org/") {|f|
+URI.open(ARGV[0]) {|f|
   f.each_line {|line| puts line}
 }

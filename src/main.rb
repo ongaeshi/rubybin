@@ -1,4 +1,7 @@
 require 'open-uri'
-URI.open(ARGV[0]) {|f|
-  f.each_line {|line| puts line}
-}
+
+ARGV.each do |url|
+  URI.open(url) {|f|
+    f.each_line {|line| puts line}
+  }
+end

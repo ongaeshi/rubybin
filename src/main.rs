@@ -3,7 +3,7 @@ use std::process::Command;
 fn main()
 {
     Command::new("ruby")
-            .args(&["-e", "p 1, 2, 3"])
+            .args(&["-e", include_str!("main.rb")])
             .status()
             .expect("failed to execute process");
 }
